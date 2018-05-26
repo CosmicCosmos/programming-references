@@ -1,4 +1,4 @@
-package net.learnings.programming.string;
+package net.learning.programming.strings;
 
 import org.testng.annotations.Test;
 
