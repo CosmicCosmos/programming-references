@@ -4,7 +4,7 @@ package net.learning.programming.linkedlist;
  * @author syarram
  * Created on : 5/26/18
  */
-public class DeleteANodeFromLinkedList {
+public class DeleteANodeFromLinkedList extends  LinkedListUtil {
 
     public static LinkedListNode deleteANode(LinkedListNode linkedListNode, int deleteAt) {
 
@@ -22,29 +22,9 @@ public class DeleteANodeFromLinkedList {
         return linkedListNode;
     }
 
-    public static LinkedListNode removeElements(LinkedListNode head, int val) {
-        LinkedListNode previous = head;
-        LinkedListNode current = head.next;
-        while(current != null) {
-            if(current.value==val){
-                previous.next = current.next;
-                current = current.next;
-            }
-            else {
-                previous = current;
-                current = current.next;
-            }
-        }
-            return head;
-        }
 
-        public static void printLinkedList (LinkedListNode node){
-            LinkedListNode linkedListNode = node;
-            while (linkedListNode != null) {
-                System.out.println(linkedListNode.value);
-                linkedListNode = linkedListNode.next;
-            }
-        }
+
+
 
 
         public static void main(String args[]){
@@ -65,9 +45,9 @@ public class DeleteANodeFromLinkedList {
             fifth.next = sixth;
             sixth.next = seven;
 
-            LinkedListNode node = removeElements(head, 2);
+            //LinkedListNode node = removeElements(head, 2);
 
-            printLinkedList(node);
+            //printLinkedList(node);
         }
 
 
