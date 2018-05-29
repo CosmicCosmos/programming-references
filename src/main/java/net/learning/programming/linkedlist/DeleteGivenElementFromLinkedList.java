@@ -7,16 +7,21 @@ package net.learning.programming.linkedlist;
 public class DeleteGivenElementFromLinkedList extends  LinkedListUtil {
 
     public static LinkedListNode removeElements(LinkedListNode head, int val) {
-        LinkedListNode previous = head;
-        LinkedListNode current = head.next;
-        while(current != null) {
-            if(current.value==val){
-                previous.next = current.next;
-                current = current.next;
-            }
-            else {
-                previous = current;
-                current = current.next;
+        if(head == null){
+            return null;
+        }
+        while(head != null && head.value == val){
+            head = head.next;
+        }
+        LinkedListNode curr = head;
+        LinkedListNode prev = head;
+        while(curr != null){
+            if(curr.value != val){
+                prev = curr;
+                curr = curr.next;
+            }else{
+                prev.next = curr.next;
+                curr = prev.next;
             }
         }
         return head;
